@@ -1,5 +1,4 @@
 # Ansible_EC2_Docker_Nignx
-Topic :
 
 Ansible_EC2_Docker_Nignx_Automation
 
