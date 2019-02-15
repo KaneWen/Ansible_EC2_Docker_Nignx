@@ -37,8 +37,11 @@ Create key pair on EC2 console.
 
 3 Security Group 
 Create Security Group and EC2 instance
+
 Ansible_create_sg_instance.yml
+
 Modify ports of the security  group
+
 Ansible_modify_sg_ports.yml
 
 
