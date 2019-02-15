@@ -1,17 +1,21 @@
 # Ansible_EC2_Docker_Nignx
-TTopic :Ansible_EC2_Docker_Nignx_Autimation
+Topic :
 
-Content:
-Ansible-ec2-docker-Nginx-deployment
+Ansible_EC2_Docker_Nignx_Autimation
+
 
 Deploy nginx via docker on AWS ec2 by Ansible Automation.
 
 Prerequisites:
 
 Pythonv2.7,
+
 Ansible,
+
 Python Boto,
+
 Git.
+
 
 Plan
 
