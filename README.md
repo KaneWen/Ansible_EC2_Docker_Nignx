@@ -41,6 +41,9 @@ Ansible_create_sg_instance.yml
 Modify ports of the security  group
 Ansible_modify_sg_ports.yml
 
+
 4 VPC  # To be edited
+
 5 Docker  # To be edited
+
 6 Nginx Docker image # To be edited
