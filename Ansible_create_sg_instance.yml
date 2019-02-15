@@ -1,0 +1,36 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    aws_access_key: "replace with the access key"
+    aws_secret_key: "replace with the secret key"
+  tasks:
+      - name: create security group
+        ec2_group:
+          name: AnRedDocNgxSer_SG
+          description: an example ec2 group
+          region: ap-southeast-2
+          aws_access_key: "{{ aws_access_key }}"
+          aws_secret_key: "{{ aws_secret_key }}"
+          rules:
+            - proto: tcp
+              from_port: 22
+              to_port: 22
+              cidr_ip: 0.0.0.0/0
+        register: group
+
+
+      - name: create ec2 instance
+        ec2:
+          aws_access_key: "{{ aws_access_key }}"
+          aws_secret_key: "{{ aws_secret_key }}"
+          keypair: sample_keypair_name
+          image: ami-67589505
+          wait: yes
+          instance_type: t2.micro
+          group_id:  "{{ group.group_id }}"
+          region: ap-southeast-2
+          count_tag:
+            Name: AnRedDocNgxSer
+          exact_count: 1
+        register: ec2

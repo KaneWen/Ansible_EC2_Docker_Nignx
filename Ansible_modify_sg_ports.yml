@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    rule_list:
+      - { proto: tcp, from_port: 80, to_port: 80, cidr_ip: 0.0.0.0/0 }
+      - { proto: tcp, from_port: 443, to_port: 443, cidr_ip: 0.0.0.0/0 }
+      - { proto: tcp, from_port: 22, to_port: 22, cidr_ip: 0.0.0.0/0 }
+    ec2_group_region: ap-southeast-2
+    ec2_group_vpc: 'vpc-a10f51c6'
+    ec2_group_description: 'an example ec2 group'
+    ec2_group_name: AnRedDocNgxSer_SG
+    aws_access_key: "replace with the access key"
+    aws_secret_key: "replace with the secret key"
+
+  tasks:
+    - name: Change security group
+      ec2_group:
+        name: '{{ ec2_group_name }}'
+        description: '{{ ec2_group_description }}'
+        vpc_id: '{{ ec2_group_vpc }}'
+        aws_access_key: '{{ aws_access_key }}'
+        aws_secret_key: '{{ aws_secret_key }}'
+        region: '{{ ec2_group_region }}'
+        rules: '{{ rule_list }}'
