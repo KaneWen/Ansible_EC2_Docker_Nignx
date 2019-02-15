@@ -23,6 +23,7 @@ Figure 1  : Ansible-ec2-docker-Nginx-deployment
 The plan of the module is deploying via a Personal Computer (PC), the Ansible is install in the Virtual Machine CentOS7 Operating System (OS). Ansible Play-book to Create Security Group (SG), Virtual Private Cloud(VPC) ,install Docker and Nginx Docker Image.
 
 The steps:
+
 1 Install  Ansible on VM CentOS7
 yum install epel-release
 yum -y install ansible
