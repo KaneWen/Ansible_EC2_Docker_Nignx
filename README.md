@@ -1,7 +1,7 @@
 # Ansible_EC2_Docker_Nignx
 Topic :
 
-Ansible_EC2_Docker_Nignx_Autimation
+Ansible_EC2_Docker_Nignx_Automation
 
 
 Deploy nginx via docker on AWS ec2 by Ansible Automation.
