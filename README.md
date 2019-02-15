@@ -12,6 +12,7 @@ Python Boto
 Git
 
 Plan
+![image of Plan_AnsibleEC2DockerNginxx](https://github.com/KaneWen/Ansible_EC2_Docker_Nignx/blob/master/Plan_AnsibleEC2DockerNginxx.png)
  
 Figure 1  : Ansible-ec2-docker-Nginx-deployment
 
